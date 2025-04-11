@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-ai-rag-expert
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      embedding:
+        options:
+          model: text-embedding-3-small
+      chat:
+        options:
+          model: gpt-4-turbo
+server:
+  port: 7001
+sfg:
+  aiapp:
+    vectorStorePath: D:\\TEMP\\vectorstore.json
+    documentsToLoad:
+      - classpath:/movies500Trimmed.csv
