@@ -16,8 +16,8 @@ public class QuestionController {
         this.openAIService = openAIService;
     }
 
-    @PostMapping("/askQuestion")
-    public Answer askQuestion(@RequestBody Question question) {
+    @PostMapping("/ask")
+    public Answer ask(@RequestBody Question question) {
         return this.openAIService.getAnswer(question);
     }
 }
